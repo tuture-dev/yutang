@@ -1,12 +1,22 @@
 {
   "name": "yutang",
-  "version": "0.0.1",
+  "description": "Utilities for multiple programming languages.",
+  "version": "0.0.2",
   "license": "MIT",
+  "keywords": [
+    "utlities",
+    "prism",
+    "programming-language"
+  ],
+  "files": [
+    "dist/"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepack": "rollup -c"
   },
   "devDependencies": {
     "rollup": "^2.6.1",
