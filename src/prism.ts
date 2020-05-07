@@ -62,18 +62,13 @@ export const prismLangArr: PrismLangRecord[] = [
   { key: 'lua', value: ['lua'] },
 ];
 
-export const enumPrismLangToLanguage: Record<string, string> = {};
+export const prismMap: Record<string, string> = {};
 
-const bimapPrismLangandLanguage = (
-  prismLangObj: PrismLangRecord,
-  index: number,
-) => {
+prismLangArr.forEach((record: PrismLangRecord, index: number) => {
   const language = languages[index];
 
-  enumPrismLangToLanguage[language] = prismLangObj.key;
-  prismLangObj.value.forEach((prismLang) => {
-    enumPrismLangToLanguage[prismLang] = language;
+  prismMap[language] = record.key;
+  record.value.forEach((prismLang) => {
+    prismMap[prismLang] = language;
   });
-};
-
-prismLangArr.forEach(bimapPrismLangandLanguage);
+});
