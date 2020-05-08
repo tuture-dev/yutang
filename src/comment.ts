@@ -1,3 +1,5 @@
+import { getValidId } from './query';
+
 const lineCommentTemplate: { [lang: string]: (line: string) => string } = {
   text: (line) => line,
   bash: (line) => `# ${line}`,
@@ -9,9 +11,8 @@ const lineCommentTemplate: { [lang: string]: (line: string) => string } = {
   dart: (line) => `// ${line}`,
   diff: (line) => line,
   django: (line) => `<!-- ${line} -->`,
-  dockerfile: (line) => `# ${line}`,
+  docker: (line) => `# ${line}`,
   erlang: (line) => `% ${line}`,
-  git: (line) => `# ${line}`,
   go: (line) => `// ${line}`,
   graphql: (line) => `# ${line}`,
   groovy: (line) => `// ${line}`,
@@ -19,7 +20,6 @@ const lineCommentTemplate: { [lang: string]: (line: string) => string } = {
   http: (line) => line,
   java: (line) => `// ${line}`,
   javascript: (line) => `// ${line}`,
-  jinja2: (line) => `<!-- ${line} -->`,
   json: (line) => `// ${line}`,
   jsx: (line) => `// ${line}`,
   kotlin: (line) => `// ${line}`,
@@ -56,6 +56,7 @@ const lineCommentTemplate: { [lang: string]: (line: string) => string } = {
 };
 
 export function comment(code: string, lang: string) {
-  const tmpl = lineCommentTemplate[lang];
+  const langId = getValidId(lang);
+  const tmpl = lineCommentTemplate[langId];
   return typeof tmpl === 'function' ? tmpl(code) : code;
 }
