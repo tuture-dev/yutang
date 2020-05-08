@@ -16,12 +16,13 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
-    "prepack": "rollup -c"
+    "build": "rimraf dist && rollup -c",
+    "prepack": "yarn build"
   },
   "devDependencies": {
     "@types/jest": "^24",
     "jest": "^24",
+    "rimraf": "^3.0.2",
     "rollup": "^2.6.1",
     "rollup-plugin-typescript2": "^0.27.0",
     "ts-jest": "^24",

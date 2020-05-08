@@ -2840,6 +2840,13 @@ rimraf@^2.5.4, rimraf@^2.6.3:
   dependencies:
     glob "^7.1.3"
 
+rimraf@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  integrity sha1-8aVAK6YiCtUswSgrrBrjqkn9Bho=
+  dependencies:
+    glob "^7.1.3"
+
 rollup-plugin-typescript2@^0.27.0:
   version "0.27.0"
   resolved "https://registry.npm.taobao.org/rollup-plugin-typescript2/download/rollup-plugin-typescript2-0.27.0.tgz#95ff96f9e07d5000a9d2df4d76b548f9a1f83511"

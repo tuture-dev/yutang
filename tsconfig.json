@@ -12,5 +12,6 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": ["src/__test__"]
 }
