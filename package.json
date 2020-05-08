@@ -15,12 +15,18 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "prepack": "rollup -c"
+    "test": "jest",
+    "build": "rimraf dist && rollup -c",
+    "prepack": "yarn build"
   },
   "devDependencies": {
+    "@types/jest": "^24",
+    "@types/node": "^13.13.5",
+    "jest": "^24",
+    "rimraf": "^3.0.2",
     "rollup": "^2.6.1",
     "rollup-plugin-typescript2": "^0.27.0",
+    "ts-jest": "^24",
     "typescript": "^3.8.3"
   }
 }

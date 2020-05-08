@@ -1,3 +1,3 @@
 export * from './languages';
-export * from './prism';
+export * from './query';
 export * from './comment';
