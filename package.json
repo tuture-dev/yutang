@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24",
+    "@types/node": "^13.13.5",
     "jest": "^24",
     "rimraf": "^3.0.2",
     "rollup": "^2.6.1",
